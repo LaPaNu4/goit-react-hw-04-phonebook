@@ -5,10 +5,6 @@ const ContactList = ({ contacts, deleteContact }) => {
   const handleDeleteContact = id => {
     deleteContact(id);
   };
-
-
-
-  
   return (
     <ul>
       {contacts.map(contact => (
