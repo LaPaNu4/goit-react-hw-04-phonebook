@@ -3,17 +3,15 @@ import React from 'react';
 
 function ContactForm({ addContact }) {
   const [state, setState] = React.useState({
-      name: '',
-      number: '',
+    name: '',
+    number: '',
   });
   const { name, number } = state;
 
   const handleChange = event => {
     setState({
-      stats: {
-        ...state,
-        [event.target.name]: event.target.value,
-      },
+      ...state,
+      [event.target.name]: event.target.value,
     });
   };
 
@@ -21,11 +19,11 @@ function ContactForm({ addContact }) {
     event.preventDefault();
     addContact(name, number);
     setState({
-      stats: {
+      
         name: '',
         number: '',
       },
-    });
+    );
   };
 
   return (
