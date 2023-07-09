@@ -5,17 +5,9 @@ import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 
 function App() {
-  const [contacts, setContacts] = React.useState([]);
+  const [contacts, setContacts] = React.useState(() => JSON.parse(localStorage.getItem('contact'))??[]);
   const [filter, setFilter] = React.useState('');
 
-  const contact = localStorage.getItem('contact');
-
- React.useEffect(() => {
-   if (contact) {
-     setContacts(JSON.parse(contact));
-   }
- // eslint-disable-next-line react-hooks/exhaustive-deps
- }, []);
 
 React.useEffect(() => {
  
