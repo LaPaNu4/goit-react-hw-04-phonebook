@@ -19,11 +19,9 @@ function ContactForm({ addContact }) {
     event.preventDefault();
     addContact(name, number);
     setState({
-      
-        name: '',
-        number: '',
-      },
-    );
+      name: '',
+      number: '',
+    });
   };
 
   return (
